@@ -1,6 +1,8 @@
 module com.javafxbindingtest {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jeromq;
+    requires com.fasterxml.jackson.databind;
 
 
     exports com.javafxbindingtest.app;

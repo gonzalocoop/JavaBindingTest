@@ -10,6 +10,10 @@ public class WeatherInfo {
     private final StringProperty condition;
     private final BooleanProperty alert;
 
+    public WeatherInfo() {
+        this(0.0, 0.0, 0.0, 0.0, "", true);
+    }
+
     public WeatherInfo(double temperature,
                        double windSpeed,
                        double humidity,

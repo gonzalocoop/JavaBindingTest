@@ -25,26 +25,20 @@ public class WeatherControl extends AnchorPane {
         loader.setRoot(this);
         loader.setController(this);
         loader.load();
-    }
 
-    @FXML
-    private void initialize() {
-
-        weatherInfo.addListener((observable, oldVariable, newVariable) -> {
-            if (newVariable != null) {
-                bindWeatherInfo(newVariable);
+        weatherInfo.addListener(((observableValue, weatherInfo1, t1) -> {
+            if (t1 != null) {
+                lblTemperature.textProperty().bind(t1.temperatureProperty().asString());
+                lblWind.textProperty().bind(t1.windSpeedProperty().asString());
+                lblHumidity.textProperty().bind(t1.humidityProperty().asString());
+                lblPressure.textProperty().bind(t1.pressureProperty().asString());
+                lblCondition.textProperty().bind(t1.conditionProperty());
+                lblAlert.textProperty().bind(t1.alertProperty().asString());
             }
-        });
+        }));
     }
 
-    public void bindWeatherInfo(WeatherInfo info) {
-        lblTemperature.textProperty().bind(info.temperatureProperty().asString());
-        lblWind.textProperty().bind(info.windSpeedProperty().asString());
-        lblHumidity.textProperty().bind(info.humidityProperty().asString());
-        lblPressure.textProperty().bind(info.pressureProperty().asString());
-        lblCondition.textProperty().bind(info.conditionProperty());
-        lblAlert.textProperty().bind(info.alertProperty().asString());
+    public ObjectProperty<WeatherInfo> weatherInfoProperty() {
+        return weatherInfo;
     }
-
-
 }
