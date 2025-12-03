@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="AnchorPane"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         stylesheets="@../css/WeatherControl.css">
+
+    <children>
+        <VBox spacing="10" prefWidth="250" prefHeight="200"
+              AnchorPane.topAnchor="10"
+              AnchorPane.bottomAnchor="10"
+              AnchorPane.leftAnchor="10"
+              AnchorPane.rightAnchor="10">
+
+            <Label id="Title" text="Información del Clima"/>
+
+            <HBox spacing="10">
+                <Label text="Temperatura:" />
+                <Label fx:id="lblTemperature" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Velocidad del viento:" />
+                <Label fx:id="lblWind" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Humedad:" />
+                <Label fx:id="lblHumidity" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Presión:" />
+                <Label fx:id="lblPressure" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Condición:" />
+                <Label fx:id="lblCondition" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Alerta:" />
+                <Label fx:id="lblAlert" />
+            </HBox>
+
+        </VBox>
+    </children>
+</fx:root>

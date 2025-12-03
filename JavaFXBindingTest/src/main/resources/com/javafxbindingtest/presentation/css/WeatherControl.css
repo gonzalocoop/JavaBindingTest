@@ -1,0 +1,40 @@
+
+
+
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1f3b5c;
+}
+
+
+#Title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0b61c3;
+}
+
+
+#lblTemperature,
+#lblWind,
+#lblHumidity,
+#lblPressure,
+#lblCondition {
+    -fx-font-weight: bold;
+    -fx-text-fill: #084c9e;
+}
+
+
+#lblAlert {
+    -fx-font-weight: bold;
+    -fx-text-fill: #d00000;
+}
+
+
+HBox {
+    -fx-padding: 3 0 3 0;
+}
+
+VBox {
+    -fx-padding: 10;
+}
