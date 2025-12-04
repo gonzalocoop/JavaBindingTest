@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package weather;
+
+option java_multiple_files = true;
+option java_package = "com.javafxbindingtest.proto";
+option java_outer_classname = "WeatherProto";
+
+message WeatherInfo {
+  double temperature = 1;
+  double windSpeed = 2;
+  double humidity = 3;
+  double pressure = 4;
+  string condition = 5;
+  bool alert = 6;
+}
+//comando que use:  protoc --java_out=src/main/java src/main/proto/com/javafxbindingtest/contracts/weather.proto

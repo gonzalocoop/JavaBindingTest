@@ -3,6 +3,7 @@ module com.javafxbindingtest {
     requires javafx.fxml;
     requires jeromq;
     requires com.fasterxml.jackson.databind;
+    requires com.google.protobuf;
 
 
     exports com.javafxbindingtest.app;

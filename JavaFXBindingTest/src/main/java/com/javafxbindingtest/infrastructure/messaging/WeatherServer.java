@@ -1,4 +1,5 @@
 package com.javafxbindingtest.infrastructure.messaging;
+import com.javafxbindingtest.proto.WeatherInfo;
 import org.zeromq.ZMQ;
 
 import java.util.Random;
@@ -25,21 +26,34 @@ public class WeatherServer {
             String condition = random.nextBoolean() ? "Sunny" : "Cloudy";
 
             // Construimos JSON manualmente (Java 11 compatible)
-            String json =
-                    "{" +
-                            "\"temperature\":" + temperature + "," +
-                            "\"windSpeed\":" + wind + "," +
-                            "\"humidity\":" + humidity + "," +
-                            "\"pressure\":" + pressure + "," +
-                            "\"condition\":\"" + condition + "\"," +
-                            "\"alert\":" + alert +
-                            "}";
+            //String json =
+            //        "{" +
+            //                "\"temperature\":" + temperature + "," +
+            //                "\"windSpeed\":" + wind + "," +
+            //                "\"humidity\":" + humidity + "," +
+            //                "\"pressure\":" + pressure + "," +
+            //                "\"condition\":\"" + condition + "\"," +
+            //                "\"alert\":" + alert +
+            //                "}";
 
 
-            publisher.send(json);
+            //publisher.send(json);
 
-            System.out.println("Enviado: " + json);
+            //System.out.println("Enviado: " + json);
 
+            // Construir objeto protobuf
+            WeatherInfo weatherInfo = WeatherInfo.newBuilder()
+                    .setTemperature(temperature)
+                    .setWindSpeed(wind)
+                    .setHumidity(humidity)
+                    .setPressure(pressure)
+                    .setCondition(condition)
+                    .setAlert(alert)
+                    .build();
+
+            // Serializar y enviar
+            publisher.send(weatherInfo.toByteArray(), 0);
+            //System.out.println("Enviado: " + weatherInfo);
             Thread.sleep(1000); // cada 1 segundo
         }
     }

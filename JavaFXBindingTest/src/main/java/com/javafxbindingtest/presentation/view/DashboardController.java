@@ -3,13 +3,11 @@ package com.javafxbindingtest.presentation.view;
 import com.javafxbindingtest.domain.WeatherInfo;
 import com.javafxbindingtest.infrastructure.messaging.ZmqWeatherClient;
 import com.javafxbindingtest.presentation.control.WeatherControl;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+
 import javafx.application.Platform;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
-import javafx.util.Duration;
 
 import java.util.Random;
 
@@ -29,7 +27,19 @@ public class DashboardController {
         zmqClient = new ZmqWeatherClient();
         // Escuchar ZeroMQ
         zmqClient.startListening("tcp://localhost:5555", info -> {
-            Platform.runLater(() -> currentWeather.set(info));
+            //Platform.runLater(() -> currentWeather.set(info));
+            Platform.runLater(() -> {
+                // Convertimos de protobuf a dominio, osea este si es tipo WeatherProtobuf domain, para poder guardarlo en el WeatherInfo ObjectProperty
+                WeatherInfo domainInfo = new WeatherInfo(
+                        info.getTemperature(),
+                        info.getWindSpeed(),
+                        info.getHumidity(),
+                        info.getPressure(),
+                        info.getCondition(),
+                        info.getAlert()
+                );
+                currentWeather.set(domainInfo);
+            });
         });
         /*
         Timeline timeline = new Timeline(

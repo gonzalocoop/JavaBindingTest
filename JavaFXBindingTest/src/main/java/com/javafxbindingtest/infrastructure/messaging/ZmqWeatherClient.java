@@ -1,7 +1,8 @@
 package com.javafxbindingtest.infrastructure.messaging;
+import com.javafxbindingtest.proto.WeatherInfo; // clase generada por protobuf
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.javafxbindingtest.domain.WeatherInfo;
+//import com.javafxbindingtest.domain.WeatherInfo;
 import org.zeromq.ZMQ;
 import java.util.function.Consumer;
 import java.io.IOException;
@@ -19,11 +20,13 @@ public class ZmqWeatherClient {
             subscriber.subscribe(""); // suscribirse a todos los mensajes
 
             while (running) {
-                String msg = subscriber.recvStr();
-                if (msg != null) {
-                    // Convertimos JSON a WeatherInfo
+                byte[] msgBytes = subscriber.recv(0);
+                if (msgBytes != null) {
                     try {
-                        WeatherInfo info = mapper.readValue(msg, WeatherInfo.class);
+                        //WeatherInfo info = mapper.readValue(msg, WeatherInfo.class);
+
+                        // Deserializar Protobuf (debe ser de tipo proto)
+                        WeatherInfo info = WeatherInfo.parseFrom(msgBytes);
                         callback.accept(info);
                     } catch (IOException e) {
                         e.printStackTrace();
