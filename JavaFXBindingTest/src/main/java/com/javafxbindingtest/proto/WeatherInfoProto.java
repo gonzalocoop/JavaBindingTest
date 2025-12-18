@@ -6,13 +6,13 @@
 package com.javafxbindingtest.proto;
 
 /**
- * Protobuf type {@code weather.WeatherInfo}
+ * Protobuf type {@code weather.WeatherInfoProto}
  */
 @com.google.protobuf.Generated
-public final class WeatherInfo extends
+public final class WeatherInfoProto extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:weather.WeatherInfo)
-    WeatherInfoOrBuilder {
+    // @@protoc_insertion_point(message_implements:weather.WeatherInfoProto)
+    WeatherInfoProtoOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -21,27 +21,27 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 33,
       /* patch= */ 1,
       /* suffix= */ "",
-      "WeatherInfo");
+      "WeatherInfoProto");
   }
-  // Use WeatherInfo.newBuilder() to construct.
-  private WeatherInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use WeatherInfoProto.newBuilder() to construct.
+  private WeatherInfoProto(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private WeatherInfo() {
+  private WeatherInfoProto() {
     condition_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfo_descriptor;
+    return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfoProto_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfo_fieldAccessorTable
+    return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfoProto_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.javafxbindingtest.proto.WeatherInfo.class, com.javafxbindingtest.proto.WeatherInfo.Builder.class);
+            com.javafxbindingtest.proto.WeatherInfoProto.class, com.javafxbindingtest.proto.WeatherInfoProto.Builder.class);
   }
 
   public static final int TEMPERATURE_FIELD_NUMBER = 1;
@@ -212,10 +212,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.javafxbindingtest.proto.WeatherInfo)) {
+    if (!(obj instanceof com.javafxbindingtest.proto.WeatherInfoProto)) {
       return super.equals(obj);
     }
-    com.javafxbindingtest.proto.WeatherInfo other = (com.javafxbindingtest.proto.WeatherInfo) obj;
+    com.javafxbindingtest.proto.WeatherInfoProto other = (com.javafxbindingtest.proto.WeatherInfoProto) obj;
 
     if (java.lang.Double.doubleToLongBits(getTemperature())
         != java.lang.Double.doubleToLongBits(
@@ -266,44 +266,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(byte[] data)
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(java.io.InputStream input)
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -311,26 +311,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.javafxbindingtest.proto.WeatherInfo parseDelimitedFrom(java.io.InputStream input)
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.javafxbindingtest.proto.WeatherInfo parseDelimitedFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static com.javafxbindingtest.proto.WeatherInfo parseFrom(
+  public static com.javafxbindingtest.proto.WeatherInfoProto parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -343,7 +343,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.javafxbindingtest.proto.WeatherInfo prototype) {
+  public static Builder newBuilder(com.javafxbindingtest.proto.WeatherInfoProto prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -359,26 +359,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code weather.WeatherInfo}
+   * Protobuf type {@code weather.WeatherInfoProto}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:weather.WeatherInfo)
-      com.javafxbindingtest.proto.WeatherInfoOrBuilder {
+      // @@protoc_insertion_point(builder_implements:weather.WeatherInfoProto)
+      com.javafxbindingtest.proto.WeatherInfoProtoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfo_descriptor;
+      return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfoProto_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfo_fieldAccessorTable
+      return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfoProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.javafxbindingtest.proto.WeatherInfo.class, com.javafxbindingtest.proto.WeatherInfo.Builder.class);
+              com.javafxbindingtest.proto.WeatherInfoProto.class, com.javafxbindingtest.proto.WeatherInfoProto.Builder.class);
     }
 
-    // Construct using com.javafxbindingtest.proto.WeatherInfo.newBuilder()
+    // Construct using com.javafxbindingtest.proto.WeatherInfoProto.newBuilder()
     private Builder() {
 
     }
@@ -404,17 +404,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfo_descriptor;
+      return com.javafxbindingtest.proto.WeatherProto.internal_static_weather_WeatherInfoProto_descriptor;
     }
 
     @java.lang.Override
-    public com.javafxbindingtest.proto.WeatherInfo getDefaultInstanceForType() {
-      return com.javafxbindingtest.proto.WeatherInfo.getDefaultInstance();
+    public com.javafxbindingtest.proto.WeatherInfoProto getDefaultInstanceForType() {
+      return com.javafxbindingtest.proto.WeatherInfoProto.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.javafxbindingtest.proto.WeatherInfo build() {
-      com.javafxbindingtest.proto.WeatherInfo result = buildPartial();
+    public com.javafxbindingtest.proto.WeatherInfoProto build() {
+      com.javafxbindingtest.proto.WeatherInfoProto result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -422,14 +422,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.javafxbindingtest.proto.WeatherInfo buildPartial() {
-      com.javafxbindingtest.proto.WeatherInfo result = new com.javafxbindingtest.proto.WeatherInfo(this);
+    public com.javafxbindingtest.proto.WeatherInfoProto buildPartial() {
+      com.javafxbindingtest.proto.WeatherInfoProto result = new com.javafxbindingtest.proto.WeatherInfoProto(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.javafxbindingtest.proto.WeatherInfo result) {
+    private void buildPartial0(com.javafxbindingtest.proto.WeatherInfoProto result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.temperature_ = temperature_;
@@ -453,16 +453,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.javafxbindingtest.proto.WeatherInfo) {
-        return mergeFrom((com.javafxbindingtest.proto.WeatherInfo)other);
+      if (other instanceof com.javafxbindingtest.proto.WeatherInfoProto) {
+        return mergeFrom((com.javafxbindingtest.proto.WeatherInfoProto)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.javafxbindingtest.proto.WeatherInfo other) {
-      if (other == com.javafxbindingtest.proto.WeatherInfo.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.javafxbindingtest.proto.WeatherInfoProto other) {
+      if (other == com.javafxbindingtest.proto.WeatherInfoProto.getDefaultInstance()) return this;
       if (java.lang.Double.doubleToRawLongBits(other.getTemperature()) != 0) {
         setTemperature(other.getTemperature());
       }
@@ -788,23 +788,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:weather.WeatherInfo)
+    // @@protoc_insertion_point(builder_scope:weather.WeatherInfoProto)
   }
 
-  // @@protoc_insertion_point(class_scope:weather.WeatherInfo)
-  private static final com.javafxbindingtest.proto.WeatherInfo DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:weather.WeatherInfoProto)
+  private static final com.javafxbindingtest.proto.WeatherInfoProto DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.javafxbindingtest.proto.WeatherInfo();
+    DEFAULT_INSTANCE = new com.javafxbindingtest.proto.WeatherInfoProto();
   }
 
-  public static com.javafxbindingtest.proto.WeatherInfo getDefaultInstance() {
+  public static com.javafxbindingtest.proto.WeatherInfoProto getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<WeatherInfo>
-      PARSER = new com.google.protobuf.AbstractParser<WeatherInfo>() {
+  private static final com.google.protobuf.Parser<WeatherInfoProto>
+      PARSER = new com.google.protobuf.AbstractParser<WeatherInfoProto>() {
     @java.lang.Override
-    public WeatherInfo parsePartialFrom(
+    public WeatherInfoProto parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -823,17 +823,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<WeatherInfo> parser() {
+  public static com.google.protobuf.Parser<WeatherInfoProto> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<WeatherInfo> getParserForType() {
+  public com.google.protobuf.Parser<WeatherInfoProto> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.javafxbindingtest.proto.WeatherInfo getDefaultInstanceForType() {
+  public com.javafxbindingtest.proto.WeatherInfoProto getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

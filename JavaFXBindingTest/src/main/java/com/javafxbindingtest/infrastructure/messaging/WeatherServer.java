@@ -1,5 +1,5 @@
 package com.javafxbindingtest.infrastructure.messaging;
-import com.javafxbindingtest.proto.WeatherInfo;
+import com.javafxbindingtest.proto.WeatherInfoProto;
 import org.zeromq.ZMQ;
 
 import java.util.Random;
@@ -42,7 +42,7 @@ public class WeatherServer {
             //System.out.println("Enviado: " + json);
 
             // Construir objeto protobuf
-            WeatherInfo weatherInfo = WeatherInfo.newBuilder()
+            WeatherInfoProto weatherInfo = WeatherInfoProto.newBuilder()
                     .setTemperature(temperature)
                     .setWindSpeed(wind)
                     .setHumidity(humidity)

@@ -6,6 +6,7 @@ module com.javafxbindingtest {
     requires com.google.protobuf;
 
 
+
     exports com.javafxbindingtest.app;
     exports com.javafxbindingtest.domain;
 

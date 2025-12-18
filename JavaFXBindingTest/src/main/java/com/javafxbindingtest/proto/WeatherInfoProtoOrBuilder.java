@@ -6,8 +6,8 @@
 package com.javafxbindingtest.proto;
 
 @com.google.protobuf.Generated
-public interface WeatherInfoOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:weather.WeatherInfo)
+public interface WeatherInfoProtoOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:weather.WeatherInfoProto)
     com.google.protobuf.MessageOrBuilder {
 
   /**
