@@ -1,4 +1,4 @@
-package com.javafxbindingtest.domain;
+package com.javafxbindingtest.domain.model;
 
 import javafx.beans.property.*;
 

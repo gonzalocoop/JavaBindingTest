@@ -3,7 +3,7 @@
 // source: src/main/proto/com/javafxbindingtest/contracts/weather.proto
 // Protobuf Java Version: 4.33.1
 
-package com.javafxbindingtest.proto;
+package com.javafxbindingtest.infrastructure.proto;
 
 @com.google.protobuf.Generated
 public interface WeatherInfoProtoOrBuilder extends

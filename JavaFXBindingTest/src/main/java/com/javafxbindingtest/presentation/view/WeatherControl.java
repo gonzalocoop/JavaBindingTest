@@ -1,6 +1,6 @@
-package com.javafxbindingtest.presentation.control;
+package com.javafxbindingtest.presentation.view;
 
-import com.javafxbindingtest.domain.WeatherInfo;
+import com.javafxbindingtest.domain.model.WeatherInfo;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;

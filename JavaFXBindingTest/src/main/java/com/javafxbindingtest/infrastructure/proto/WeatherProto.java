@@ -3,7 +3,7 @@
 // source: src/main/proto/com/javafxbindingtest/contracts/weather.proto
 // Protobuf Java Version: 4.33.1
 
-package com.javafxbindingtest.proto;
+package com.javafxbindingtest.infrastructure.proto;
 
 @com.google.protobuf.Generated
 public final class WeatherProto extends com.google.protobuf.GeneratedFile {
@@ -46,8 +46,8 @@ public final class WeatherProto extends com.google.protobuf.GeneratedFile {
       "dSpeed\030\002 \001(\001\022\020\n\010humidity\030\003 \001(\001\022\020\n\010pressu" +
       "re\030\004 \001(\001\022\021\n\tcondition\030\005 \001(\t\022\r\n\005alert\030\006 \001" +
       "(\010\022\020\n\010latitude\030\007 \001(\001\022\021\n\tlongitude\030\010 \001(\001B" +
-      "-\n\033com.javafxbindingtest.protoB\014WeatherP" +
-      "rotoP\001b\006proto3"
+      "<\n*com.javafxbindingtest.infrastructure." +
+      "protoB\014WeatherProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

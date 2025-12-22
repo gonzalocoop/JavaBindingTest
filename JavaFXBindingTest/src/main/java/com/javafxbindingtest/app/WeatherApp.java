@@ -1,11 +1,17 @@
 package com.javafxbindingtest.app;
 
+import com.javafxbindingtest.infrastructure.cache.RedisWeatherCache;
+import com.javafxbindingtest.infrastructure.messaging.zmq.ZmqWeatherClient;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class WeatherApp extends Application {
+
+    //Dependencias con ciclo de vida
+    private final ZmqWeatherClient zmqWeatherClient = new ZmqWeatherClient();
+    private final RedisWeatherCache redisWeatherCache = new RedisWeatherCache();
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -18,7 +24,15 @@ public class WeatherApp extends Application {
         stage.show();
     }
 
+    //Apagar
+    @Override
+    public void stop() {
+        zmqWeatherClient.stop();
+        redisWeatherCache.close();
+    }
+
     public static void main(String[] args) {
+
         launch();
     }
 }

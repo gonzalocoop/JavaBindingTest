@@ -6,9 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import com.javafxbindingtest.presentation.control.WeatherControl?>
+<?import com.javafxbindingtest.presentation.view.WeatherControl?>
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.javafxbindingtest.presentation.view.DashboardController">
+            fx:controller="com.javafxbindingtest.presentation.controller.DashboardController">
 
     <center>
         <WeatherControl fx:id="weatherControl" />

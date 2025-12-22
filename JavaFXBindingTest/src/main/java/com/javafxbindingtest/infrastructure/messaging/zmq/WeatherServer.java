@@ -1,5 +1,5 @@
-package com.javafxbindingtest.infrastructure.messaging;
-import com.javafxbindingtest.proto.WeatherInfoProto;
+package com.javafxbindingtest.infrastructure.messaging.zmq;
+import com.javafxbindingtest.infrastructure.proto.WeatherInfoProto;
 import org.zeromq.ZMQ;
 
 import java.util.Random;
@@ -26,8 +26,6 @@ public class WeatherServer {
             String condition = random.nextBoolean() ? "Sunny" : "Cloudy";
             double latitude = -13 + random.nextDouble() * 1;
             double longitude = -78 + random.nextDouble() * 1;
-
-            //System.out.println("Enviado: " + json);
 
             // Construir objeto protobuf
             WeatherInfoProto weatherInfo = WeatherInfoProto.newBuilder()
