@@ -24,20 +24,8 @@ public class WeatherServer {
             double pressure = 990 + random.nextDouble() * 30;
             boolean alert = random.nextBoolean();
             String condition = random.nextBoolean() ? "Sunny" : "Cloudy";
-
-            // Construimos JSON manualmente (Java 11 compatible)
-            //String json =
-            //        "{" +
-            //                "\"temperature\":" + temperature + "," +
-            //                "\"windSpeed\":" + wind + "," +
-            //                "\"humidity\":" + humidity + "," +
-            //                "\"pressure\":" + pressure + "," +
-            //                "\"condition\":\"" + condition + "\"," +
-            //                "\"alert\":" + alert +
-            //                "}";
-
-
-            //publisher.send(json);
+            double latitude = -13 + random.nextDouble() * 1;
+            double longitude = -78 + random.nextDouble() * 1;
 
             //System.out.println("Enviado: " + json);
 
@@ -49,6 +37,8 @@ public class WeatherServer {
                     .setPressure(pressure)
                     .setCondition(condition)
                     .setAlert(alert)
+                    .setLatitude(latitude)
+                    .setLongitude(longitude)
                     .build();
 
             // Serializar y enviar

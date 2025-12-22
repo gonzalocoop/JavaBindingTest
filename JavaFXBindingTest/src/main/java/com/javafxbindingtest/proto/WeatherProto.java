@@ -41,12 +41,13 @@ public final class WeatherProto extends com.google.protobuf.GeneratedFile {
   static {
     java.lang.String[] descriptorData = {
       "\n<src/main/proto/com/javafxbindingtest/c" +
-      "ontracts/weather.proto\022\007weather\"\200\001\n\020Weat" +
+      "ontracts/weather.proto\022\007weather\"\245\001\n\020Weat" +
       "herInfoProto\022\023\n\013temperature\030\001 \001(\001\022\021\n\twin" +
       "dSpeed\030\002 \001(\001\022\020\n\010humidity\030\003 \001(\001\022\020\n\010pressu" +
       "re\030\004 \001(\001\022\021\n\tcondition\030\005 \001(\t\022\r\n\005alert\030\006 \001" +
-      "(\010B-\n\033com.javafxbindingtest.protoB\014Weath" +
-      "erProtoP\001b\006proto3"
+      "(\010\022\020\n\010latitude\030\007 \001(\001\022\021\n\tlongitude\030\010 \001(\001B" +
+      "-\n\033com.javafxbindingtest.protoB\014WeatherP" +
+      "rotoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -57,7 +58,7 @@ public final class WeatherProto extends com.google.protobuf.GeneratedFile {
     internal_static_weather_WeatherInfoProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_weather_WeatherInfoProto_descriptor,
-        new java.lang.String[] { "Temperature", "WindSpeed", "Humidity", "Pressure", "Condition", "Alert", });
+        new java.lang.String[] { "Temperature", "WindSpeed", "Humidity", "Pressure", "Condition", "Alert", "Latitude", "Longitude", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

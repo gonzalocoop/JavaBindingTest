@@ -13,5 +13,7 @@ message WeatherInfoProto {
   double pressure = 4;
   string condition = 5;
   bool alert = 6;
+  double latitude=7;
+  double longitude=8;
 }
 //comando que use:  protoc --java_out=src/main/java src/main/proto/com/javafxbindingtest/contracts/weather.proto

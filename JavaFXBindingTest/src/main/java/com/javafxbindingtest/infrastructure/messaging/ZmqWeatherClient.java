@@ -23,7 +23,6 @@ public class ZmqWeatherClient {
                 byte[] msgBytes = subscriber.recv(0);
                 if (msgBytes != null) {
                     try {
-                        //WeatherInfo info = mapper.readValue(msg, WeatherInfo.class);
 
                         // Deserializar Protobuf (debe ser de tipo proto)
                         WeatherInfoProto info = WeatherInfoProto.parseFrom(msgBytes);

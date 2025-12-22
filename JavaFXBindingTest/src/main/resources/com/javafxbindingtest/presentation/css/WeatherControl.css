@@ -19,7 +19,10 @@
 #lblWind,
 #lblHumidity,
 #lblPressure,
-#lblCondition {
+#lblCondition,
+#lblLatitude,
+#lblLongitude
+{
     -fx-font-weight: bold;
     -fx-text-fill: #084c9e;
 }

@@ -50,6 +50,16 @@
                 <Label fx:id="lblAlert" />
             </HBox>
 
+            <HBox spacing="10">
+                <Label text="Latitud:" />
+                <Label fx:id="lblLatitude" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Longitud:" />
+                <Label fx:id="lblLongitude" />
+            </HBox>
+
         </VBox>
     </children>
 </fx:root>

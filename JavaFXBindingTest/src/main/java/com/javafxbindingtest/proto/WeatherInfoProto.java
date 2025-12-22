@@ -138,6 +138,28 @@ private static final long serialVersionUID = 0L;
     return alert_;
   }
 
+  public static final int LATITUDE_FIELD_NUMBER = 7;
+  private double latitude_ = 0D;
+  /**
+   * <code>double latitude = 7;</code>
+   * @return The latitude.
+   */
+  @java.lang.Override
+  public double getLatitude() {
+    return latitude_;
+  }
+
+  public static final int LONGITUDE_FIELD_NUMBER = 8;
+  private double longitude_ = 0D;
+  /**
+   * <code>double longitude = 8;</code>
+   * @return The longitude.
+   */
+  @java.lang.Override
+  public double getLongitude() {
+    return longitude_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -169,6 +191,12 @@ private static final long serialVersionUID = 0L;
     }
     if (alert_ != false) {
       output.writeBool(6, alert_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(latitude_) != 0) {
+      output.writeDouble(7, latitude_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(longitude_) != 0) {
+      output.writeDouble(8, longitude_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -202,6 +230,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, alert_);
     }
+    if (java.lang.Double.doubleToRawLongBits(latitude_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(7, latitude_);
+    }
+    if (java.lang.Double.doubleToRawLongBits(longitude_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(8, longitude_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -233,6 +269,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCondition())) return false;
     if (getAlert()
         != other.getAlert()) return false;
+    if (java.lang.Double.doubleToLongBits(getLatitude())
+        != java.lang.Double.doubleToLongBits(
+            other.getLatitude())) return false;
+    if (java.lang.Double.doubleToLongBits(getLongitude())
+        != java.lang.Double.doubleToLongBits(
+            other.getLongitude())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -261,6 +303,12 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ALERT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAlert());
+    hash = (37 * hash) + LATITUDE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getLatitude()));
+    hash = (37 * hash) + LONGITUDE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getLongitude()));
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -398,6 +446,8 @@ private static final long serialVersionUID = 0L;
       pressure_ = 0D;
       condition_ = "";
       alert_ = false;
+      latitude_ = 0D;
+      longitude_ = 0D;
       return this;
     }
 
@@ -449,6 +499,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.alert_ = alert_;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.latitude_ = latitude_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.longitude_ = longitude_;
+      }
     }
 
     @java.lang.Override
@@ -482,6 +538,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getAlert() != false) {
         setAlert(other.getAlert());
+      }
+      if (java.lang.Double.doubleToRawLongBits(other.getLatitude()) != 0) {
+        setLatitude(other.getLatitude());
+      }
+      if (java.lang.Double.doubleToRawLongBits(other.getLongitude()) != 0) {
+        setLongitude(other.getLongitude());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -539,6 +601,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 57: {
+              latitude_ = input.readDouble();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 57
+            case 65: {
+              longitude_ = input.readDouble();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 65
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -784,6 +856,70 @@ private static final long serialVersionUID = 0L;
     public Builder clearAlert() {
       bitField0_ = (bitField0_ & ~0x00000020);
       alert_ = false;
+      onChanged();
+      return this;
+    }
+
+    private double latitude_ ;
+    /**
+     * <code>double latitude = 7;</code>
+     * @return The latitude.
+     */
+    @java.lang.Override
+    public double getLatitude() {
+      return latitude_;
+    }
+    /**
+     * <code>double latitude = 7;</code>
+     * @param value The latitude to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLatitude(double value) {
+
+      latitude_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double latitude = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLatitude() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      latitude_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double longitude_ ;
+    /**
+     * <code>double longitude = 8;</code>
+     * @return The longitude.
+     */
+    @java.lang.Override
+    public double getLongitude() {
+      return longitude_;
+    }
+    /**
+     * <code>double longitude = 8;</code>
+     * @param value The longitude to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLongitude(double value) {
+
+      longitude_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double longitude = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLongitude() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      longitude_ = 0D;
       onChanged();
       return this;
     }

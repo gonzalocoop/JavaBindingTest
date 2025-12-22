@@ -51,4 +51,16 @@ public interface WeatherInfoProtoOrBuilder extends
    * @return The alert.
    */
   boolean getAlert();
+
+  /**
+   * <code>double latitude = 7;</code>
+   * @return The latitude.
+   */
+  double getLatitude();
+
+  /**
+   * <code>double longitude = 8;</code>
+   * @return The longitude.
+   */
+  double getLongitude();
 }

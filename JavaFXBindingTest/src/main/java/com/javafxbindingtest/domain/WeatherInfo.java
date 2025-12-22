@@ -9,9 +9,11 @@ public class WeatherInfo {
     private final DoubleProperty pressure;
     private final StringProperty condition;
     private final BooleanProperty alert;
+    private final DoubleProperty latitude;
+    private final DoubleProperty longitude;
 
     public WeatherInfo() {
-        this(0.0, 0.0, 0.0, 0.0, "", true);
+        this(0.0, 0.0, 0.0, 0.0, "", true,0.0,0.0);
     }
 
     public WeatherInfo(double temperature,
@@ -19,7 +21,9 @@ public class WeatherInfo {
                        double humidity,
                        double pressure,
                        String condition,
-                       boolean alert) {
+                       boolean alert,
+                       double latitude,
+                       double longitude) {
 
         this.temperature = new SimpleDoubleProperty(temperature);
         this.windSpeed = new SimpleDoubleProperty(windSpeed);
@@ -27,6 +31,8 @@ public class WeatherInfo {
         this.pressure = new SimpleDoubleProperty(pressure);
         this.condition = new SimpleStringProperty(condition);
         this.alert = new SimpleBooleanProperty(alert);
+        this.latitude = new SimpleDoubleProperty(latitude);
+        this.longitude = new SimpleDoubleProperty(longitude);
     }
 
     public double getTemperature() { return temperature.get(); }
@@ -52,5 +58,14 @@ public class WeatherInfo {
     public boolean isAlert() { return alert.get(); }
     public BooleanProperty alertProperty() { return alert; }
     public void setAlert(boolean v) { alert.set(v); }
+
+    public double getLatitude() { return latitude.get(); }
+    public DoubleProperty latitudeProperty() { return latitude; }
+    public void setLatitude(double v) { latitude.set(v); }
+
+    public double getLongitude() { return longitude.get(); }
+    public DoubleProperty longitudeProperty() { return longitude; }
+    public void setLongitude(double v) { longitude.set(v); }
+
 }
 

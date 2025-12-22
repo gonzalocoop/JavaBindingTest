@@ -17,6 +17,8 @@ public class WeatherControl extends AnchorPane {
     @FXML private Label lblPressure;
     @FXML private Label lblCondition;
     @FXML private Label lblAlert;
+    @FXML private Label lblLatitude;
+    @FXML private Label lblLongitude;
 
     private final ObjectProperty<WeatherInfo> weatherInfo = new SimpleObjectProperty<>();
 
@@ -34,6 +36,8 @@ public class WeatherControl extends AnchorPane {
                 lblPressure.textProperty().bind(t1.pressureProperty().asString());
                 lblCondition.textProperty().bind(t1.conditionProperty());
                 lblAlert.textProperty().bind(t1.alertProperty().asString());
+                lblLatitude.textProperty().bind(t1.latitudeProperty().asString());
+                lblLongitude.textProperty().bind(t1.longitudeProperty().asString());
             }
         }));
     }
