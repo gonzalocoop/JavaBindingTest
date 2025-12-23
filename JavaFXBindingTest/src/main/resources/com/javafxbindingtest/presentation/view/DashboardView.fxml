@@ -13,5 +13,8 @@
     <center>
         <WeatherControl fx:id="weatherControl" />
     </center>
+    <bottom>
+        <Button text="Ver historial" onAction="#openHistory"/>
+    </bottom>
 
 </BorderPane>

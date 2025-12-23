@@ -17,7 +17,7 @@ public class WeatherApp extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javafxbindingtest/presentation/view/DashboardView.fxml"));
         stage.setWidth(400);
-        stage.setHeight(400);
+        stage.setHeight(450);
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.setTitle("Weather Dashboard");

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.javafxbindingtest.presentation.controller.HistoryController">
+
+    <center>
+        <TableView fx:id="table">
+
+            <columns>
+                <TableColumn fx:id="tempCol" text="Temp"/>
+                <TableColumn fx:id="windCol" text="Wind"/>
+                <TableColumn fx:id="humidityCol" text="Humidity"/>
+                <TableColumn fx:id="pressureCol" text="Pressure"/>
+                <TableColumn fx:id="conditionCol" text="Condition"/>
+            </columns>
+
+        </TableView>
+    </center>
+
+</BorderPane>
